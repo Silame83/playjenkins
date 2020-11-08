@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "compie-registry.local:5000"
+    registry = "compie-registry.local:5000/jenkins/myweb"
     dockerImage = ""
   }
 
@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/justmeandopensource/playjenkins.git'
+        git 'https://github.com/Silame83/playjenkins.git'
       }
     }
 
