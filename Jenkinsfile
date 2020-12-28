@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "compie-registry.local:5000/jenkins/myweb"
+    registry = "10.30.1.7:5000/"
     dockerImage = ""
   }
 
@@ -36,7 +36,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "mykubeconfig")
+          kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "kubeconfig")
         }
       }
     }
