@@ -22,16 +22,6 @@ pipeline {
         }
       }
     }
-    
-    stage('Push Image') {
-      steps{
-        script {
-          docker.withRegistry( "" ) {
-            dockerImage.push()
-          }
-        }
-      }
-    }
 
     stage('Deploy App') {
       steps {
